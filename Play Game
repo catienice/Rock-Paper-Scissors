@@ -1,0 +1,37 @@
+// Rock Paper Scissors
+// possible outcomes:
+// rock destroys scissors
+// scissors cut paper
+// paper covers rock
+//  tie means game ends in a draw
+
+// Code in four parts:
+// gert user's choice
+// get computer's choice
+// compare the two choices and determine winner
+// start the program and display the results
+
+
+
+const getUserChoice = (userInput) => {
+    userInput = userInput.toLowerCase();
+    if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors')
+    return userInput
+    else{
+        console.log('error');
+    }
+}
+getUserChoice('paper');
+
+
+const getComputerChoice = () => {
+    const randomNumber = Math.floor(Math.random () * 2);
+    if(randomNumber === 0){
+        return 'rock';
+    }else if(randomNumber === 1){
+        return 'paper';
+    }else{
+        return 'scissors';
+    };
+}
+getComputerChoice();
